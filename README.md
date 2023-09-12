@@ -1,5 +1,5 @@
-<p style="margin-bottom: 5px;">Codestyle is a big problem in scripts for any cheat.</p>
-<p style="margin-bottom: 5px;">I hope this will make (at least few people) write somewhat readable code. Yes, this isn't perfect and I hope this isn't as bad as I thought.</p>
+<p style="margin-bottom: 5px;">Codestyle is a big problem in scripts for any cheat and I tried to write how I write the code in this repo. I'll add mode things when I'll have much time (rn I have, but I'm working on some luas).</p>
+<p style="margin-bottom: 5px;">I hope this will make (at least few people) write somewhat readable code. Yes, this is not perfect and I hope this isn't as bad as I thought.</p>
 <p style="margin-bottom: 5px;">My english is very very very bad, it isn't my native. Create issue/pull request if you want to fix something (or, if you don't want to register github, pm me in discord: LiterallyNN).</p>
 Feel free to post it everywhere you want, criticism is not only accepted, but it is necessary - write to discord or create an issue.
 
