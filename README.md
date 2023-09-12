@@ -119,6 +119,15 @@ local another_function = function()
 end
 ```
 
+```lua
+local example_table = {}; do
+  local user = c_user.new("Andryusha")
+  function example_table:method()
+    print("Hello, " .. user.name)
+  end
+end
+```
+
 ## Comments
 Square brackets:
   1. Should have -- before (both at start and end of comment)
