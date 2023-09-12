@@ -20,16 +20,24 @@ local button_callbacks = {
     cursor_pos = function()
         local pos = interfaces["input_system"]:get_cursor_pos()
         print(pos.x .. " | " .. pos.y)
+    end,
+    set_clipboard = function()
+        interfaces["clipboard"]:set_text("Weave > all")
+    end,
+    get_clipboard = function()
+        print("You had following text in ur clipboard: " .. interfaces["clipboard"]:get_text())
     end
 }
 
 local settings = {
     ["left"] = {
         ["is_holding_0"] = ui.button("Check if I'm holding Y", button_callbacks.holding_y),
-        ["print_cursor_pos"] = ui.button("Print cursor position in console", button_callbacks.cursor_pos)
+        ["print_cursor_pos"] = ui.button("Print cursor position in console", button_callbacks.cursor_pos),
+        ["print_x_buttoncode"] = ui.button("Print X buttoncode in console", button_callbacks.print_x_key)
     },
     ["right"] = {
-        ["print_x_buttoncode"] = ui.button("Print X buttoncode in console", button_callbacks.print_x_key)
+        ["set_clipboard"] = ui.button("Set clipboard text", button_callbacks.set_clipboard),
+        ["get_clipboard"] = ui.button("Print clipboard text in console", button_callbacks.get_clipboard)
     }
 }
 

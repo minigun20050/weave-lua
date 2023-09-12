@@ -16,13 +16,11 @@ local clipboard = base(); do
     clipboard:vcreate("get_text_count", 7, "int(__thiscall*)(void*)")
 
     function clipboard:get_text()
-        print("called")
         local length = self:get_text_count()
         if length < 0 then
             error("Clipboard text length is 0?")
             return ""
         end
-        print("called 2")
         local buffer = ffi.new("char[?]", length)
             self:get_text_raw(0, buffer, length)
         return ffi.string(buffer, length - 1)

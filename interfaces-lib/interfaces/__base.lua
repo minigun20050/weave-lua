@@ -39,9 +39,6 @@ local base = function()
         self.interface = create_interface(self.filename, self.interface_name)
         self.vtable = ffi.cast("void***", self.interface)
 
-        print("interface address: " .. tostring(self.interface))
-        print(self.interface_name .. "'s virtual table first function address: " .. tostring(ffi.cast("void*", self.vtable[0][0])))
-
         if self.vtable == nil or self.vtable[0] == nil then
             return -1
         end
@@ -50,7 +47,6 @@ local base = function()
 
     function tbl:vcreate(name, idx, definition)
         local func = ffi.cast(ffi.typeof(definition), self.vtable[idx])
-        print("virtual function " .. name .. "[" .. tostring(idx) .. "] address: " .. tostring(ffi.cast("void*", func)))
         self[name] = function(arg0, ...)
             if type(arg0) ~= "table" then
                 error("Interface methods should be called only with :")

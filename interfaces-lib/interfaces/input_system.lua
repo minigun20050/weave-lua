@@ -160,6 +160,7 @@ local input_system = base(); do
     input_system:vcreate("enable_input", 11, "void(__thiscall*)(void*, bool)")
     input_system:vcreate("is_button_down", 15, "bool(__thiscall*)(void*, e_button_code)")
     input_system:vcreate("button_code_to_string", 40, "const char*(__thiscall*)(void*, e_button_code)")
+    input_system:vcreate("string_to_button_code", 42, "e_button_code(__thiscall*)(void*, const char*)")
     input_system:vcreate("vk_to_button_code", 44, "e_button_code(__thiscall*)(void*, int)")
     input_system:vcreate("button_code_to_vk", 45, "int(__thiscall*)(void*, e_button_code)")
     input_system:vcreate("get_cursor_pos_raw", 56, "void(__thiscall*)(void*, int*, int*)")
