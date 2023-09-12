@@ -1,5 +1,5 @@
-<p style="margin-bottom: 5px;">Codestyle is a big problem in scripts for any cheat and I tried to write how I write the code in this repo. I'll add mode things when I'll have much time (rn I have, but I'm working on some luas).</p>
-<p style="margin-bottom: 5px;">I hope this will make (at least few people) write somewhat readable code. Yes, this is not perfect and I hope this isn't as bad as I thought.</p>
+<p style="margin-bottom: 5px;">Codestyle is a big problem in scripts for any cheat.</p>
+<p style="margin-bottom: 5px;">I hope this will make (at least few people) write somewhat readable code. Yes, this isn't perfect and I hope this isn't as bad as I thought.</p>
 <p style="margin-bottom: 5px;">My english is very very very bad, it isn't my native. Create issue/pull request if you want to fix something (or, if you don't want to register github, pm me in discord: LiterallyNN).</p>
 Feel free to post it everywhere you want, criticism is not only accepted, but it is necessary - write to discord or create an issue.
 
@@ -102,7 +102,7 @@ Functions rules:
     (doesn't work when readability will be better without newlines)
   2. You should put link to source right before definition if you took it from somewhere
     (if it's described better and/or it's only small part of code and there is chance that you'll need to edit this shit)
-  3. It should be defined as variables
+  3. It should be defined in **one way** everywhere (variables or functions), excluding methods (example:method())
 
 ```lua
 local first_function = function()
