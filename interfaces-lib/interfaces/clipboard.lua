@@ -1,3 +1,10 @@
+--[[
+    Part of interfaces library for weave.
+
+    Source:
+      Random leaked neverlose lua code ;D
+--]]
+
 local ffi = require("ffi")
 local base = require("interfaces/__base")
 
