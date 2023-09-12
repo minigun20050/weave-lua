@@ -21,11 +21,11 @@ File should have following structure:
      8. Unnecessary information about code
   2. Includes (ffi & others)
   3. FFI Section:
-     1. Separated cdef's for every logical section (example: WinApi definitions, function definitions (set_clantag, get_interface), interface definitions, other interface definitions, ...)
+     1. Separated cdef's for every logical section
+      (example: WinApi definitions, function definitions (set_clantag, get_interface), interface definitions, other interface definitions, ...)
      2. Enums (if needed)
-     3. Tables or functions that will contain FFI interfaces/functions wrappers
-      **Should be filled right after definition (in do ... end block starting at same line), definition must be empty**
-      Double dash comment (allowed: =, _, -, . and +) if readability sucks (in most cases it will)
+     3. Tables or functions that will contain FFI interfaces/functions wrappers.
+      **Should be filled right after definition (in do ... end block starting at same line), definition must be just {}**
      4. Other ffi-related stuff
   4. Utils section (utils table)
   5. UI section (**utils shouldn't use ui, but can have functions like get_selectable_value**)
@@ -51,7 +51,7 @@ It contains following information:
   5. Unnecessary information
   6. ToDo
 
-Reason why everyone should mark sections is simple - it improves overall readability and it helps you with searching needed stuff. Like really, you can just type 
+Reason why everyone should mark sections is simple - it improves overall readability and it helps you with searching needed stuff. Not needed if file contains only one class or doing one thing (example: small libraries)
 
 ```lua
 --[[
@@ -74,7 +74,7 @@ Rules for tables are as simple as possible:
   1. Use [] for variables (while initializing or calling or whatever you're doing)
   2. Don't use [] for functions (while initializing or calling or whatever you're doing)
 
-Why? It helps a lot when you're working on unknown project. You know where is functions and where is variables so you'll never made really stupid mistakes related to this.
+Why? It helps a lot when you're working on unknown project. You know where is functions and where is variables so you'll never make really stupid mistakes related to this.
 
 ```lua
 local example_table = {
@@ -162,6 +162,22 @@ local example_function = function()
   -- ToDo: make it print "Minecraft"
   print("example")
 end
+```
+
+# Tables that only contains definitions or nothing (and will be filled right after)
+They **should be filled inside do end block of code**. That's all.
+
+```lua
+local base_interface = {}; do
+  local some_variable_used_only_inside_this = 1337
+  base_interface["vtable"] = 0xDEADBEEF
+  
+  base_interface.print_thing = function()
+    print(some_variable_used_only_inside_this)
+  end
+end
+base_interface.print_thing() -- 1337
+print(some_variable_used_only_inside_this) -- nil - Variable is not avaiable outside.
 ```
 
 I guess I'll explain more stuff later.
