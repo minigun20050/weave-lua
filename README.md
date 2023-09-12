@@ -102,7 +102,7 @@ Functions rules:
     (doesn't work when readability will be better without newlines)
   2. You should put link to source right before definition if you took it from somewhere
     (if it's described better and/or it's only small part of code and there is chance that you'll need to edit this shit)
-  3. It should be defined in **one way** everywhere (variables or functions), excluding methods (example:method())
+  3. It should be defined in **one way** everywhere (variables or functions), excluding methods (example:method()), it can't be defined as variable
 
 ```lua
 local first_function = function()
