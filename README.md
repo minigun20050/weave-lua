@@ -14,7 +14,7 @@ File should have following structure:
      1. Author
      2. File purpose
      3. Libraries [newline if not end]
-     4. Short explanation of features
+     4. Short explanation of features (if file purpose isn't enough to explain)
      5. Necessary information about code [newline if not end]
      6. Useful links to documentation (example: link to winapi methods used) [newline if not end]
      7. ToDo (what you need to do + line + explanation if needed on next line with 2 more spaces, do not write ToDo's that will be done at same day) [newline if needed]
@@ -37,6 +37,15 @@ File should have following structure:
   Author: NoName
   Part of interfaces library that implements IInputSystem
   Requires FFI
+
+  Source:
+    https://github.com/LWSS/Fuzion/blob/master/src/SDK/IInputSystem.h
+    https://docs.gamesense.gs/docs/snippets/ffi/basic_input_system
+
+  ToDo:
+    - input_system.is_enabled
+    - input_system.button_code_to_string, input_system.string_to_button_code
+    - Fix issues with is_down - wrong index?
 --]]
 
 -- Code
