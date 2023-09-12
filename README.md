@@ -11,22 +11,22 @@ Feel free to post it everywhere you want, criticism is not only accepted, but it
 ## File structure
 File should have following structure:
   1. Square-brackets comment, that can include:
-    - Author
-    - File purpose
-    - Libraries [newline if not end]
-    - Short explanation of features
-    - Necessary information about code [newline if not end]
-    - Useful links to documentation (example: link to winapi methods used) [newline if not end]
-    - ToDo (what you need to do + line + explanation if needed on next line with 2 more spaces, do not write ToDo's that will be done at same day) [newline if needed]
-    - Unnecessary information about code
+     1. Author
+     2. File purpose
+     3. Libraries [newline if not end]
+     4. Short explanation of features
+     5. Necessary information about code [newline if not end]
+     6. Useful links to documentation (example: link to winapi methods used) [newline if not end]
+     7. ToDo (what you need to do + line + explanation if needed on next line with 2 more spaces, do not write ToDo's that will be done at same day) [newline if needed]
+     8. Unnecessary information about code
   2. Includes (ffi & others)
   3. FFI Section:
-    - Separated cdef's for every logical section (example: WinApi definitions, function definitions (set_clantag, get_interface), interface definitions, other interface definitions, ...)
-    - Enums (if needed)
-    - Tables or functions that will contain FFI interfaces/functions wrappers
+     1. Separated cdef's for every logical section (example: WinApi definitions, function definitions (set_clantag, get_interface), interface definitions, other interface definitions, ...)
+     2. Enums (if needed)
+     3. Tables or functions that will contain FFI interfaces/functions wrappers
       **Should be filled right after definition (in do ... end block starting at same line), definition must be empty**
       Double dash comment (allowed: =, _, -, . and +) if readability sucks (in most cases it will)
-    - Other ffi-related stuff
+     4. Other ffi-related stuff
   4. Utils section (utils table)
   5. UI section (**utils shouldn't use ui, but can have functions like get_selectable_value**)
   6. Main code (**you should still separate sections inside of main code**)
