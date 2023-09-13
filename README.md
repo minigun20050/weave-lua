@@ -1,7 +1,7 @@
 <p style="margin-bottom: 5px;">Codestyle is a big problem in scripts for any cheat.</p>
 <p style="margin-bottom: 5px;">I hope this will make (at least few people) write somewhat readable code. Yes, this isn't perfect and I hope this isn't as bad as I thought.</p>
-<p style="margin-bottom: 5px;">My english is very very very bad, it isn't my native. Create issue/pull request if you want to fix something (or, if you don't want to register github, pm me in discord: LiterallyNN).</p>
-Feel free to post it everywhere you want, criticism is not only accepted, but it is necessary - write to discord or create an issue.
+<p style="margin-bottom: 5px;">My english is very very very bad, it isn't my native. Create issue/pull request if you want to fix something (or, if you don't want to register github, pm me on discord: LiterallyNN).</p>
+Feel free to post it wherever you want, criticism is not only allowed, but it is necessary - write on discord or create an issue.
 
 # Codestyle
 **You should use snake_case.**
@@ -17,7 +17,7 @@ File should have following structure:
      4. Short explanation of features (if file purpose isn't enough to explain)
      5. Necessary information about code [newline if not end]
      6. Useful links to documentation (example: link to winapi methods used) [newline if not end]
-     7. ToDo (what you need to do + line + explanation if needed on next line with 2 more spaces, do not write ToDo's that will be done at same day) [newline if needed]
+     7. ToDo (what you need to do + line + explanation if needed on next line with 2 more spaces, do not write ToDo's that will be done at the same day) [newline if needed]
      8. Unnecessary information about code
   2. Includes (ffi & others)
   3. FFI Section:
