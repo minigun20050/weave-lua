@@ -46,10 +46,14 @@ local base = function()
     end
 
     function tbl:vcreate(name, idx, definition)
+        if self.vtable == nil then
+            error("VTable is nil. Initialize interface before using, please.")
+            return -1
+        end
         local func = ffi.cast(ffi.typeof(definition), self.vtable[idx])
         self[name] = function(arg0, ...)
             if type(arg0) ~= "table" then
-                error("Interface methods should be called only with :")
+                error("Interface methods should be only called with :")
                 return -1
             end
             if self.interface == nil then
